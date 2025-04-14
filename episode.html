@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Episode - Blooming To Life Comic</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Blooming To Life</h1>
+    <nav>
+      <a href="index.html">Episodes</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+  <main id="episode-images">
+    <p>Loading episode...</p>
+  </main>
+  <script>
+    // Get episode ID from query string
+    function getQueryParam(name) {
+      const url = new URL(window.location.href);
+      return url.searchParams.get(name);
+    }
+    const epId = getQueryParam('ep');
+    const main = document.getElementById('episode-images');
+    fetch('episodes.json')
+      .then(res => res.json())
+      .then(data => {
+        const ep = data.episodes.find(e => e.id === epId);
+        if (!ep) {
+          main.innerHTML = '<p>Episode not found.</p>';
+          return;
+        }
+        main.innerHTML = `<h2>${ep.title}</h2>`;
+        ep.images.forEach(img => {
+          const image = document.createElement('img');
+          image.src = `episodes/${ep.id}/${img}`;
+          image.alt = ep.title;
+          image.className = 'episode-img';
+          main.appendChild(image);
+        });
+      })
+      .catch(() => {
+        main.innerHTML = '<p>Error loading episode.</p>';
+      });
+  </script>
+</body>
+</html>

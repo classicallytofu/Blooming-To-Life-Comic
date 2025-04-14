@@ -1,0 +1,15 @@
+{
+  "episodes": [
+    {
+      "id": "ep01",
+      "title": "Episode 1: Being Fitted at the Tailor",
+      "images": [
+        "001.jpg",
+        "002.jpg",
+        "003.jpg"
+        // Add more images as needed
+      ]
+    }
+    // Add more episodes here
+  ]
+}

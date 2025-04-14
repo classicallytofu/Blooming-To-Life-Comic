@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Blooming To Life Comic</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Blooming To Life</h1>
+    <nav>
+      <a href="index.html">Episodes</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Episodes</h2>
+    <ul id="episode-list"></ul>
+  </main>
+  <script src="episodes.js"></script>
+  <script>
+    // Populate episode list
+    fetch('episodes.json')
+      .then(res => res.json())
+      .then(data => {
+        const list = document.getElementById('episode-list');
+        data.episodes.forEach(ep => {
+          const li = document.createElement('li');
+          li.innerHTML = `<a href="episode.html?ep=${encodeURIComponent(ep.id)}">${ep.title}</a>`;
+          list.appendChild(li);
+        });
+      });
+  </script>
+</body>
+</html>

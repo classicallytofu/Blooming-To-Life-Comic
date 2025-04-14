@@ -1,0 +1,105 @@
+/* 🎨 Fun + Clean Webtoon Style */
+
+body {
+    font-family: 'Comic Neue', 'Helvetica Neue', sans-serif;
+    background: #fffdf7;
+    color: #2d2d2d;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  header {
+    background: linear-gradient(135deg, #ffea00, #ff8c00);
+    color: #fff;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border-bottom: 3px solid #ffb300;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    margin: 0;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px #00000022;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: #2d2d2d;
+    background: #fff;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background 0.3s;
+    box-shadow: 2px 2px 0 #ffb300;
+  }
+  
+  nav a:hover {
+    background: #ffea00;
+  }
+  
+  section {
+    padding: 1rem;
+  }
+  
+  #episodes a {
+    display: block;
+    background: #fef6d5;
+    border: 2px dashed #ff8c00;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    transition: transform 0.2s ease;
+  }
+  
+  #episodes a:hover {
+    transform: scale(1.02);
+    background: #fff3af;
+  }
+  
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 6px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  .popup {
+    font-family: 'Comic Neue', sans-serif;
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0,0,0,0.6);
+    max-width: 90%;
+    margin: auto;
+    text-align: center;
+    animation: popin 0.3s ease-in-out;
+  }
+  
+  @keyframes popin {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  
+  button {
+    background: #ff8c00;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 25px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background: #ff6700;
+  }
+  

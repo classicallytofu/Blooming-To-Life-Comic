@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #fff;
+  color: #222;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+header {
+  background: #e3f2fd;
+  padding: 1em;
+  text-align: center;
+}
+nav a {
+  margin: 0 1em;
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: bold;
+}
+main {
+  padding: 1em;
+}
+ul#episode-list {
+  list-style: none;
+  padding: 0;
+}
+ul#episode-list li {
+  margin-bottom: 1em;
+}
+.episode-img {
+  width: 100%;
+  display: block;
+  margin-bottom: 0;
+  background: #eee;
+}
+#desktop-warning {
+  position: fixed;
+  z-index: 1000;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#desktop-warning.hidden {
+  display: none;
+}
+#desktop-warning .popup {
+  background: #fff;
+  padding: 2em 1em;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 90vw;
+}
+#desktop-warning button {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+}
